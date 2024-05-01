@@ -1,0 +1,18 @@
+#Conversão de numeros positivos inteiros na base decimal para base binária
+#José Roberto Acosta Marçal Junior 
+while True:
+    try: 
+        x = int(input("Entre com um número inteiro positivo na base decimal: "))
+        if x < 0: #avalia se o usuário inseriu um número valido
+            print("Por favor, insira um número inteiro positivo.")
+        else:
+            break #interrompe a execução do loop
+    except ValueError: #avalia caso o usuário insira um valor inválido (ex. letras ou frases)
+        print("Entrada inválida. Por favor, insira um número inteiro.")
+j = " "
+while x > 0:
+      y = x % 2 #resto da divisão por 2 
+      j = str(y) + j #add o resto à esquerda da representação binária
+      x //= 2 #atualiza o num decimal dividindo por 2
+
+print (f'O numero inteiro positivo da base decimal convertido para base binária é igual a: {j}')
